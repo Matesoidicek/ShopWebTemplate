@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* reusable */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* ---- Header ----- */
+
+header {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url("img/background.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.nav-bar nav ul{
+    list-style-type: none;
+}
+
+.nav-bar nav ul li {
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.nav-bar nav ul li a {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+
+
+
+/* STOP FLOATING */
+
+.clearfix {zoom:1}
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
