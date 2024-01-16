@@ -15,7 +15,7 @@
 /* ---- Header ----- */
 
 header {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
     url("img/background.jpg");
     background-size: cover;
     height: 100vh;
@@ -23,6 +23,11 @@ header {
 }
 
 .nav-bar nav ul{
+    /* New way I found how to center nav-bar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     list-style-type: none;
 }
 
@@ -31,15 +36,73 @@ header {
     display: inline-block;
 }
 
-.nav-bar nav ul li a {
+.nav-bar nav ul li a:link,
+.nav-bar nav ul li a:visited {
     color: #fff;
     font-size: 20px;
-    margin-left: 15px;
+    margin-left: 25px;
     text-decoration: none;
+    border-bottom: transparent;
 }
 
+.nav-bar nav ul li a:hover,
+.nav-bar nav ul li a:active {
+    transition: border-bottom 2.5s;
+    border-bottom: 2.5px solid #940352;
+}
 
+/* ----- title ----- */
 
+.heading-h1 {
+    display: block;
+    color: #fff;
+    text-align: center;
+    margin-top: 40vh;
+    font-size: 50px;
+}
+
+/* Main */
+.heading-h2 h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.heading-h2 h2:after {
+    content: "";
+    width: 250px;
+    display: block;
+    font-size: 35px;
+    border-bottom: 4px solid #940352;
+    margin: 10px auto;
+}
+
+.product-image {
+    text-align: center;
+    height: 100vh;
+    margin-top: 30px;
+}
+
+.product-image::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.product .product-image a img {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+.product .product-image a img:hover {
+    opacity: 0.8;
+    transition: opacity 0.5s;
+}
+
+.product .product-text h3 {
+    font-size: 20px;
+    text-align: center;
+}
 
 /* STOP FLOATING */
 
